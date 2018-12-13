@@ -1,15 +1,15 @@
 {
-  "name": "firstchat",
+  "name": "firstfirebase",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.2",
-    "socket.io": "^1.7.3"
+    "express": "^4.16.4",
+    "firebase": "^5.5.5"
   }
 }

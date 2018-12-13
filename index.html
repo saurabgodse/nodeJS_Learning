@@ -1,29 +1,43 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Socket.IO chat</title>
+    <head>
+            <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-firestore.js"></script>
+    </head>
+    <body>
+        <h1> FIRST FIREBASE</h1>
+
+        <div id='div1'>
+            <form id='inserting'>
+                <input type='text' name='name' placeholder='name'>
+                <input type='text' name='email' placeholder='email'>
+                <input type='submit'>
+            </form>
+            <ul id='reading'></ul>
+
+        </div>
+
     
-  </head>
-  <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m"/><button>Send</button>
-    </form>
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-      $(function () {
-        var socket = io();
-        $('form').submit(function(){
-          socket.emit('chat message', $('#m').val());
-          $('#m').val('');
-          return false;
-        });
-        socket.on('chat message', function(msg){
-          $('#messages').append($('<li>').text(msg));
-         
-        });
-      });
-    </script>
-  </body>
+
+
+
+
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDk9TjdnDIvz1Z163qWQpmY3GRbuIy2nQ8",
+    authDomain: "firstfirebase-a7062.firebaseapp.com",
+    databaseURL: "https://firstfirebase-a7062.firebaseio.com",
+    projectId: "firstfirebase-a7062",
+    storageBucket: "firstfirebase-a7062.appspot.com",
+    messagingSenderId: "829817055258"
+  };
+  firebase.initializeApp(config);
+  const db=firebase.firestore();
+  db.settings({ timestampsInSnapshots: true });
+</script>
+<script src="app.js"></script>
+    </body>
 </html>

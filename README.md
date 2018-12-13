@@ -18,7 +18,7 @@ Write a dummy server which will demonstrate the mentioned things into it.
 used IDE : Visual Studio Code
 Check Branches ( different project is done to understand various topics)
 
-References and resources:
+References and resources used:
 1. https://socket.io/
 2. https://expressjs.com/
 3. https://www.w3schools.com/nodejs/
